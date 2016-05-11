@@ -1,2 +1,8 @@
 #!/bin/sh
-start prometheus-node_exporter
+
+# cope with both systemd and upstart
+if  ps -p1 | grep systemd > /dev/null; then
+  systemctl restart prometheus-node_exporter
+else 
+  start prometheus-node_exporter
+fi
