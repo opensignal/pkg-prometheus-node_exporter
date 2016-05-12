@@ -5,3 +5,6 @@ Description=prometheus node_exporter
 Type=simple
 EnvironmentFile=/etc/default/prometheus-node_exporter
 ExecStart=/usr/lib/prometheus/node_exporter -- $ARGS
+
+[Install]
+WantedBy=multi-user.target

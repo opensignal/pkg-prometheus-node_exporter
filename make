@@ -3,7 +3,7 @@
 
 VERSION=0.12.0
 VERSION_EPOCH=2:
-VERSION_SUFFIX=os4
+VERSION_SUFFIX=os5
 MAINTAINER="adrian@opensignal.com"
 
 wget -c https://github.com/prometheus/node_exporter/releases/download/$VERSION/node_exporter-$VERSION.linux-amd64.tar.gz
