@@ -1,5 +1,12 @@
 #!/bin/sh
 
+# create directory for textfile collector
+DIR=/var/lib/prometheus-node-exporter
+if ! [ -d "$DIR" ]; then
+  mkdir -p "$DIR"
+  chmod 1777 "$DIR"
+fi
+
 # cope with both systemd and upstart
 if  ps -p1 | grep systemd > /dev/null; then
   systemctl enable prometheus-node_exporter.service
