@@ -3,7 +3,7 @@
 
 VERSION=0.12.0
 VERSION_EPOCH=2:
-VERSION_SUFFIX=os5
+VERSION_SUFFIX=os6
 MAINTAINER="adrian@opensignal.com"
 
 wget -c https://github.com/prometheus/node_exporter/releases/download/$VERSION/node_exporter-$VERSION.linux-amd64.tar.gz
@@ -14,4 +14,4 @@ fpm -f -m "$MAINTAINER" -t deb -s dir -n prometheus-node_exporter -v $VERSION_EP
   --post-install postinst \
   systemd/prometheus-node_exporter=/lib/systemd/system/prometheus-node_exporter.service \
   node_exporter-$VERSION.linux-amd64/node_exporter=/usr/lib/prometheus/node_exporter
-  
+
