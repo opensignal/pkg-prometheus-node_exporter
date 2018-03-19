@@ -1,7 +1,7 @@
 
 #!/bin/sh
 
-VERSION=0.12.0
+VERSION=0.14.0
 VERSION_EPOCH=2:
 VERSION_SUFFIX=os8
 MAINTAINER="adrian@opensignal.com"
