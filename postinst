@@ -8,7 +8,7 @@ if ! [ -d "$DIR" ]; then
 fi
 
 # cope with both systemd and upstart
-if  ps -p1 | grep systemd > /dev/null; then
+if [ -x /bin/systemd ]; then
   systemctl daemon-reload
   systemctl enable prometheus-node_exporter.service
   systemctl restart prometheus-node_exporter
