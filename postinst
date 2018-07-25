@@ -9,9 +9,11 @@ fi
 
 # cope with both systemd and upstart
 if [ -x /bin/systemd ]; then
-  systemctl daemon-reload
-  systemctl enable prometheus-node_exporter.service
-  systemctl restart prometheus-node_exporter
+  if [ "$(pidof systemd)" ]; then
+    systemctl daemon-reload
+    systemctl enable prometheus-node_exporter.service
+    systemctl restart prometheus-node_exporter
+  fi
 else 
   stop prometheus-node_exporter || true
   start prometheus-node_exporter
