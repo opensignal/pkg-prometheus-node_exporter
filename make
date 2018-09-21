@@ -1,9 +1,9 @@
 
 #!/bin/sh
 
-VERSION=0.14.0
+VERSION=0.16.0
 VERSION_EPOCH=2:
-VERSION_SUFFIX=os9
+VERSION_SUFFIX=os1
 MAINTAINER="adrian@opensignal.com"
 
 wget -c https://github.com/prometheus/node_exporter/releases/download/v$VERSION/node_exporter-$VERSION.linux-amd64.tar.gz
