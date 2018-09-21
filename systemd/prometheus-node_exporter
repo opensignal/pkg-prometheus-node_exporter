@@ -4,7 +4,7 @@ Description=prometheus node_exporter
 [Service]
 Type=simple
 EnvironmentFile=/etc/default/prometheus-node_exporter
-ExecStart=/usr/lib/prometheus/node_exporter -- $ARGS
+ExecStart=/usr/lib/prometheus/node_exporter $ARGS
 
 [Install]
 WantedBy=multi-user.target
